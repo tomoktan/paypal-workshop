@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  script.
+    clientToken = "#{clientToken}";
+  script(
+    src="https://www.paypalobjects.com/api/button.js?",
+    data-merchant="braintree",
+    data-id="paypal-button",
+    data-button="checkout",
+    data-color="gold",
+    data-size="medium",
+    data-shape="pill",
+    data-button_type="submit",
+    data-button_disabled="false"
+  )
+    
+block javascripts
+  script(src="/javascripts/index.bundle.js")
